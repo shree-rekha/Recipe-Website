@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick & Easy Vegan Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+          <li><a href="../vegan/vegan.html" class="active">Vegan</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Quick & Easy Vegan Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- Vegan Chickpea Wrap -->
+    <div class="recipe" id="vegan-wrap">
+      <img src="../images/vegan-wrap.jpg" alt="Vegan Chickpea Wrap">
+      <h3>Vegan Chickpea Wrap</h3>
+      <p>A protein-rich wrap made with mashed chickpeas and fresh veggies.</p>
+      <ol class="recipe-steps">
+        <li>Mash chickpeas with vegan mayo, lemon juice, and seasonings.</li>
+        <li>Add diced cucumber, bell pepper, and onion.</li>
+        <li>Spread on a whole wheat tortilla and roll it up.</li>
+        <li>Serve chilled or slightly warmed.</li>
+      </ol>
+      <a href="vegan-wrap.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=ZXW8ZWNIBCg" target="_blank">Video</a>
+    </div>
+
+    <!-- Quick Vegan Stir-Fry -->
+    <div class="recipe" id="vegan-stirfry">
+      <img src="../images/vegan-stirfry.jpg" alt="Vegan Stir-Fry">
+      <h3>Quick Vegan Stir-Fry</h3>
+      <p>A fast and flavorful veggie stir-fry with tofu and soy sauce.</p>
+      <ol class="recipe-steps">
+        <li>Chop vegetables and sauté with garlic in sesame oil.</li>
+        <li>Add tofu cubes and soy sauce or tamari.</li>
+        <li>Stir-fry until veggies are tender-crisp.</li>
+        <li>Serve with rice or noodles.</li>
+      </ol>
+      <a href="vegan-stirfry.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=h8IXBipqYgs" target="_blank">Video</a>
+    </div>
+
+    <!-- Vegan Iced Matcha Latte -->
+    <div class="recipe" id="vegan-matcha">
+      <img src="../images/vegan-matcha.jpg" alt="Vegan Iced Matcha Latte">
+      <h3>Iced Matcha Latte</h3>
+      <p>A cool, dairy-free drink with almond milk and matcha powder.</p>
+      <ol class="recipe-steps">
+        <li>Whisk matcha powder with hot water until smooth.</li>
+        <li>Fill a glass with ice and pour over almond or oat milk.</li>
+        <li>Add matcha mixture and sweetener (optional).</li>
+        <li>Stir and enjoy cold.</li>
+      </ol>
+      <a href="vegan-matcha.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=HIa6SinJKbQ" target="_blank">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

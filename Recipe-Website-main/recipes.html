@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Browse all delicious recipes - from breakfast to dessert, quick meals, and healthy options.">
+  <title>All Recipes | Delicious Recipes</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 6px 10px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #e67e22;
+    }
+
+    .tags {
+      margin: 30px 20px 10px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #eee;
+      padding: 6px 12px;
+      margin: 4px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .tags span:hover {
+      background-color: #e67e22;
+      color: white;
+    }
+
+    .stats {
+      margin: 10px 20px;
+    }
+
+    .recipe-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .recipe-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .recipe-card:hover {
+      transform: scale(1.02);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      nav li {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="recipes.html" class="active" aria-current="page">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="lunch/lunch.html">Lunch</a></li>
+          <li><a href="dinner/dinner.html">Dinner</a></li>
+          <li><a href="desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li><a href="submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
+      <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+  <div class="header-search-container">
+    <input type="text" id="header-search-input" placeholder="Search for a recipe..." aria-label="Search recipes">
+    <div id="results-container"></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content" style="text-align:center; padding: 30px;">
+      <h1>Explore All Our Recipes</h1>
+      <p>Browse a variety of meals hand-picked for every taste and time of day.</p>
+    </div>
+  </section>
+
+  <section class="tags">
+    <h3>Popular Tags</h3>
+    <div>
+      <span onclick="filterTag('healthy')">#healthy</span>
+      <span onclick="filterTag('chocolate')">#chocolate</span>
+      <span onclick="filterTag('spicy')">#spicy</span>
+      <span onclick="filterTag('glutenfree')">#glutenfree</span>
+      <span onclick="filterTag('30min')">#30min</span>
+    </div>
+  </section>
+
+  <section class="stats">
+    <p><strong id="totalRecipes">Loading recipes...</strong></p>
+  </section>
+
+  <section class="recipe-list" id="recipeList">
+    <!-- Cards will be dynamically added -->
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+</footer>
+
+<script>
+  const recipes = [
+    { name: "Pancakes", image: "images/pancakes.jpg", category: "breakfast", tags: ["30min", "sweet"] },
+    { name: "Veggie Stir-Fry", image: "images/quick-stirfry.jpg", category: "quick", tags: ["healthy", "30min"] },
+    { name: "Chocolate Mug Cake", image: "images/mug-cake.jpg", category: "desserts", tags: ["chocolate"] },
+    { name: "Fruit Salad", image: "images/fruit-salad.jpg", category: "breakfast", tags: ["healthy"] }
+  ];
+
+  function renderRecipes(filtered = recipes) {
+    const container = document.getElementById("recipeList");
+    const stats = document.getElementById("totalRecipes");
+    container.innerHTML = "";
+    stats.textContent = `${filtered.length} Recipes Found`;
+
+    filtered.forEach(r => {
+      const card = document.createElement("div");
+      card.className = "recipe-card";
+      card.innerHTML = `
+        <img src="${r.image}" alt="${r.name}" loading="lazy" onerror="this.src='images/default.jpg';">
+        <h3>${r.name}</h3>
+        <p>Category: ${r.category.charAt(0).toUpperCase() + r.category.slice(1)}</p>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  function filterTag(tag) {
+    renderRecipes(recipes.filter(r => r.tags.includes(tag)));
+  }
+
+  document.addEventListener("DOMContentLoaded", () => renderRecipes());
+</script>
+
+</body>
+</html>

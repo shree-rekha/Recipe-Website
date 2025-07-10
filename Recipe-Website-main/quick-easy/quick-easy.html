@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quick & Easy Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Quick & Easy Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- 5-Minute Mug Cake -->
+    <div class="recipe" id="mug-cake">
+      <img src="../images/mug-cake.jpg" alt="5-Minute Mug Cake">
+      <h3>5-Minute Mug Cake</h3>
+      <p>Instant chocolate cake in a mug using simple ingredients.</p>
+      <ol class="recipe-steps">
+        <li>Mix flour, cocoa, sugar, baking powder, milk, oil, and vanilla in a mug.</li>
+        <li>Microwave for 1.5–2 minutes.</li>
+        <li>Let cool slightly and enjoy.</li>
+      </ol>
+      <a href="mug-cake.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=ga9E59j3Sls" target="_blank">Video</a>
+    </div>
+
+    <!-- Quick Veggie Stir-Fry -->
+    <div class="recipe" id="veggie-stirfry">
+      <img src="../images/quick-stirfry.jpg" alt="Quick Veggie Stir-Fry">
+      <h3>Quick Veggie Stir-Fry</h3>
+      <p>Colorful vegetables stir-fried in under 10 minutes.</p>
+      <ol class="recipe-steps">
+        <li>Chop assorted veggies (bell peppers, carrots, beans).</li>
+        <li>Sauté in oil with garlic, soy sauce, and chili flakes.</li>
+        <li>Cook until tender-crisp and serve hot.</li>
+      </ol>
+      <a href="quick-veggie-stirfry.html">More Info</a>
+      <br>
+      <a href="https://www.youtube.com/watch?v=rO7dR3Lohp4" target="_blank">Video</a>
+    </div>
+
+    <!-- Refreshing Iced Tea -->
+    <div class="recipe" id="iced-tea">
+      <img src="../images/iced-tea.jpg" alt="Iced Tea">
+      <h3>Refreshing Iced Tea</h3>
+      <p>Chilled black tea with lemon and mint — a perfect quick refresher.</p>
+      <ol class="recipe-steps">
+        <li>Boil 2 cups of water and steep 2 black tea bags for 5 minutes.</li>
+        <li>Remove bags and let the tea cool.</li>
+        <li>Add lemon juice, honey (or sugar), and chill in the fridge.</li>
+        <li>Serve over ice with mint leaves and lemon slices.</li>
+      </ol>
+      <a href="iced-tea.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=R88FeOepf-0" target="_blank">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

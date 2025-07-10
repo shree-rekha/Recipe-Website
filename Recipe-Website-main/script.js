@@ -75,7 +75,7 @@ const seasonalRecipes = {
         { id: 'spring-salad', title: 'Spring Salad', image: './images/spring-salad.jpg', link: './lunch/spring-salad.html' },
     ],
     summer: [
-        { id: 'iced-tea', title: 'Iced Tea', image: './images/iced-tea.jpg', link: './lunch/iced-tea.html' },
+        { id: 'iced-tea', title: 'Iced Tea', image: './images/iced-tea.jpg', link: './quick-easy/iced-tea.html' },
         { id: 'grilled-vegetables', title: 'Grilled Vegetables', image: './images/grilled-vegetables.jpg', link: './lunch/grilled-veggies.html' },
     ],
     fall: [

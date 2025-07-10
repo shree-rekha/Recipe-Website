@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iced Matcha Latte - Delicious Recipes</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Background Wrapper -->
+<div class="background-wrapper"></div>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Recipe Detail Section -->
+<section class="recipe-detail">
+  <div class="container">
+    <div class="recipe-header">
+      <div class="recipe-image">
+        <img src="../images/vegan-matcha.jpg" alt="Iced Matcha Latte">
+      </div>
+      <div class="recipe-info">
+        <h1>Iced Matcha Latte</h1>
+        <p class="recipe-description">A refreshing and creamy Japanese green tea drink made with matcha, milk, and a touch of sweetness — perfect for cooling down with a healthy twist.</p>
+
+        <div class="recipe-stats">
+          <div class="stat"><i class="fas fa-clock"></i><span>Prep: 5 mins</span></div>
+          <div class="stat"><i class="fas fa-fire"></i><span>No Cook</span></div>
+          <div class="stat"><i class="fas fa-users"></i><span>Serves: 1</span></div>
+          <div class="stat"><i class="fas fa-signal"></i><span>Difficulty: Easy</span></div>
+        </div>
+
+        <div class="recipe-actions">
+          <button class="btn-primary" onclick="printRecipe()"><i class="fas fa-print"></i> Print Recipe</button>
+          <button class="btn-secondary" onclick="saveRecipe()"><i class="fas fa-heart"></i> Save Recipe</button>
+          <button class="btn-secondary" onclick="shareRecipe()"><i class="fas fa-share"></i> Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-content">
+      <div class="ingredients-section">
+        <h2><i class="fas fa-list"></i> Ingredients</h2>
+        <ul class="ingredients-list">
+          <li><input type="checkbox"> 1 tsp matcha green tea powder</li>
+          <li><input type="checkbox"> 2 tbsp hot water (not boiling)</li>
+          <li><input type="checkbox"> 1–2 tsp maple syrup or sweetener of choice</li>
+          <li><input type="checkbox"> 3/4 cup chilled oat milk or other plant milk</li>
+          <li><input type="checkbox"> Ice cubes</li>
+        </ul>
+      </div>
+
+      <div class="instructions-section">
+        <h2><i class="fas fa-clipboard-list"></i> Instructions</h2>
+        <ol class="instructions-list">
+          <li>
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Whisk the matcha</h3>
+              <p>In a small bowl, whisk matcha powder with hot water until smooth and frothy using a bamboo whisk or milk frother.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Sweeten</h3>
+              <p>Add maple syrup or your preferred sweetener to the matcha mixture and stir to combine.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Assemble the latte</h3>
+              <p>Fill a glass with ice, pour in chilled oat milk, then slowly pour the matcha mixture on top for a layered look.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Stir & serve</h3>
+              <p>Stir gently to combine before drinking. Enjoy immediately!</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="recipe-notes">
+      <h2><i class="fas fa-lightbulb"></i> Chef's Tips</h2>
+      <ul>
+        <li>Sift the matcha powder first to prevent clumps.</li>
+        <li>Use ceremonial grade matcha for best flavor and vibrant color.</li>
+        <li>Add vanilla extract for a flavor boost.</li>
+        <li>Swap oat milk with almond, soy, or coconut milk as desired.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+<script>
+function printRecipe() {
+  window.print();
+}
+function saveRecipe() {
+  alert('Recipe saved to your favorites!');
+}
+function shareRecipe() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Iced Matcha Latte Recipe',
+      text: 'Try this refreshing Iced Matcha Latte at home!',
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert('Recipe link copied to clipboard!');
+  }
+}
+</script>
+</body>
+</html>
