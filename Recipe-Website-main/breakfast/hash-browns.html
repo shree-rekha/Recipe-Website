@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Browns - Delicious Recipes</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../search-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Background Wrapper -->
+<div class="background-wrapper"></div>
+
+<header>
+    <div class="logo">🍽️ Delicious Recipes</div>
+    <div class="header-search-container">
+        <input type="text" id="header-search-input" placeholder="Search for a recipe...">
+        <div id="results-container"></div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../recipes.html" class="active">Recipes</a>
+                <ul class="dropdown-menu">
+                    <li><a href="breakfast.html" class="active">Breakfast</a></li>
+                    <li><a href="../lunch/lunch.html">Lunch</a></li>
+                    <li><a href="../dinner/dinner.html">Dinner</a></li>
+                    <li><a href="../desserts/desserts.html">Desserts</a></li>
+                </ul>
+            </li>
+            <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../login.html" class="login-btn">Login</a></li>
+            <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Recipe Detail Section -->
+<section class="recipe-detail">
+    <div class="container">
+        <div class="recipe-header">
+            <div class="recipe-image">
+                <img src="../images/hash-browns.jpg" alt="Hash Browns">
+            </div>
+            <div class="recipe-info">
+                <h1>Crispy Hash Browns</h1>
+                <p class="recipe-description">Crispy on the outside and tender inside, these homemade hash browns are a breakfast classic and pair perfectly with eggs, bacon, or toast.</p>
+
+                <div class="recipe-stats">
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>Prep: 10 mins</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-fire"></i>
+                        <span>Cook: 10 mins</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span>Serves: 2</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-signal"></i>
+                        <span>Difficulty: Easy</span>
+                    </div>
+                </div>
+
+                <div class="recipe-actions">
+                    <button class="btn-primary" onclick="printRecipe()">
+                        <i class="fas fa-print"></i> Print Recipe
+                    </button>
+                    <button class="btn-secondary" onclick="saveRecipe()">
+                        <i class="fas fa-heart"></i> Save Recipe
+                    </button>
+                    <button class="btn-secondary" onclick="shareRecipe()">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="recipe-content">
+            <div class="ingredients-section">
+                <h2><i class="fas fa-list"></i> Ingredients</h2>
+                <ul class="ingredients-list">
+                    <li><input type="checkbox"> 2 large russet potatoes, peeled</li>
+                    <li><input type="checkbox"> 2 tablespoons vegetable oil</li>
+                    <li><input type="checkbox"> Salt and pepper to taste</li>
+                    <li><input type="checkbox"> Optional: 1 tablespoon butter for extra flavor</li>
+                </ul>
+            </div>
+
+            <div class="instructions-section">
+                <h2><i class="fas fa-clipboard-list"></i> Instructions</h2>
+                <ol class="instructions-list">
+                    <li>
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Shred the potatoes</h3>
+                            <p>Use a grater to shred the peeled potatoes. Place them in a bowl of cold water and soak for 5 minutes to remove excess starch.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Drain and dry</h3>
+                            <p>Drain the shredded potatoes and squeeze out as much water as possible using a clean kitchen towel or paper towels.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Heat oil</h3>
+                            <p>In a skillet, heat the vegetable oil over medium-high heat. Add butter if using for flavor.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Cook the hash browns</h3>
+                            <p>Add the shredded potatoes in a thin, even layer. Cook without stirring for 4–5 minutes until golden brown on the bottom.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Flip and finish</h3>
+                            <p>Flip the hash browns and cook the other side until golden and crisp, about 4–5 minutes more. Season with salt and pepper and serve hot.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="recipe-notes">
+            <h2><i class="fas fa-lightbulb"></i> Chef's Tips</h2>
+            <ul>
+                <li>Make sure the potatoes are well-drained to avoid soggy hash browns.</li>
+                <li>Add finely chopped onions for extra flavor.</li>
+                <li>Use a cast iron skillet for maximum crispiness.</li>
+                <li>Top with cheese or a fried egg for a hearty twist.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+<script>
+function printRecipe() {
+    window.print();
+}
+
+function saveRecipe() {
+    alert('Recipe saved to your favorites!');
+}
+
+function shareRecipe() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Hash Browns Recipe',
+            text: 'Try these crispy homemade hash browns!',
+            url: window.location.href
+        });
+    } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Recipe link copied to clipboard!');
+    }
+}
+</script>
+</body>
+</html>

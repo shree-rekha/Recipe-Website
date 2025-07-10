@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soups & Salads Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Soups & Salads Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- Tomato Soup -->
+    <div class="recipe" id="tomato-soup">
+      <img src="../images/tomato-soup.jpg" alt="Tomato Soup">
+      <h3>Tomato Basil Soup</h3>
+      <p>Rich and creamy tomato soup with basil.</p>
+      <ol class="recipe-steps">
+        <li>Sauté onions and garlic in olive oil.</li>
+        <li>Add tomatoes and simmer 20 min.</li>
+        <li>Blend smooth, stir in cream & basil.</li>
+        <li>Serve hot with croutons.</li>
+      </ol>
+      <a href="tomato-soup.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=szjZ3vqwyXE" target="_blank">Video</a>
+    </div>
+
+    <!-- Sweet Corn Soup -->
+    <div class="recipe" id="sweet-corn">
+      <img src="../images/sweet-corn.jpg" alt="Sweet Corn Soup">
+      <h3>Sweet Corn Soup</h3>
+      <p>Delicate Indo-Chinese style soup with veggies.</p>
+      <ol class="recipe-steps">
+        <li>Boil corn, carrots, and beans.</li>
+        <li>Add corn paste, thicken, season.</li>
+        <li>Add pepper, soy sauce, garnish.</li>
+        <li>Serve hot.</li>
+      </ol>
+      <a href="sweet-corn.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=YMLdWEuVg1s" target="_blank">Video</a>
+    </div>
+
+    <!-- Greek Salad -->
+    <div class="recipe" id="greek-salad">
+      <img src="../images/greek-salad.jpg" alt="Greek Salad">
+      <h3>Greek Salad</h3>
+      <p>Refreshing salad with tomato, olives, feta.</p>
+      <ol class="recipe-steps">
+        <li>Chop tomatoes, cucumbers, olives.</li>
+        <li>Add feta, drizzle olive oil & vinegar.</li>
+        <li>Season and toss gently.</li>
+        <li>Serve chilled.</li>
+      </ol>
+      <a href="greek-salad.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=kwq4vl610iY" target="_blank">Video</a>
+    </div>
+
+    <!-- Caesar Salad -->
+    <div class="recipe" id="caesar-salad">
+      <img src="../images/caesar-salad.jpg" alt="Caesar Salad">
+      <h3>Caesar Salad</h3>
+      <p>Classic romaine salad with Caesar dressing.</p>
+      <ol class="recipe-steps">
+        <li>Chop romaine lettuce and add croutons.</li>
+        <li>Mix in parmesan and Caesar dressing.</li>
+        <li>Top with grilled chicken (optional).</li>
+        <li>Serve chilled.</li>
+      </ol>
+      <a href="caesar-salad.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=IGlWE4AFQ5Q" target="_blank">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

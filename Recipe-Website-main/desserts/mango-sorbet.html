@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mango Sorbet - Delicious Recipes</title>
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Background Wrapper -->
+<div class="background-wrapper"></div>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <div class="header-search-container">
+    <input type="text" id="header-search-input" placeholder="Search for a recipe...">
+    <div id="results-container"></div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html" class="active">Desserts</a></li>
+        </ul>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Recipe Detail Section -->
+<section class="recipe-detail">
+  <div class="container">
+    <div class="recipe-header">
+      <div class="recipe-image">
+        <img src="../images/mango-sorbet.jpg" alt="Mango Sorbet">
+      </div>
+      <div class="recipe-info">
+        <h1>Mango Sorbet</h1>
+        <p class="recipe-description">A tropical and refreshing frozen dessert made with just a few ingredients. This mango sorbet is perfect for summer and bursting with fruity flavor.</p>
+
+        <div class="recipe-stats">
+          <div class="stat"><i class="fas fa-clock"></i><span>Prep: 10 mins</span></div>
+          <div class="stat"><i class="fas fa-fire"></i><span>Freeze: 4–5 hrs</span></div>
+          <div class="stat"><i class="fas fa-users"></i><span>Serves: 4</span></div>
+          <div class="stat"><i class="fas fa-signal"></i><span>Difficulty: Easy</span></div>
+        </div>
+
+        <div class="recipe-actions">
+          <button class="btn-primary" onclick="printRecipe()"><i class="fas fa-print"></i> Print Recipe</button>
+          <button class="btn-secondary" onclick="saveRecipe()"><i class="fas fa-heart"></i> Save Recipe</button>
+          <button class="btn-secondary" onclick="shareRecipe()"><i class="fas fa-share"></i> Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-content">
+      <div class="ingredients-section">
+        <h2><i class="fas fa-list"></i> Ingredients</h2>
+        <ul class="ingredients-list">
+          <li><input type="checkbox"> 3 cups ripe mango (cubed)</li>
+          <li><input type="checkbox"> 1/2 cup sugar</li>
+          <li><input type="checkbox"> 1/2 cup water</li>
+          <li><input type="checkbox"> 1 tbsp lemon or lime juice</li>
+          <li><input type="checkbox"> Pinch of salt</li>
+        </ul>
+      </div>
+
+      <div class="instructions-section">
+        <h2><i class="fas fa-clipboard-list"></i> Instructions</h2>
+        <ol class="instructions-list">
+          <li>
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Make Sugar Syrup</h3>
+              <p>Combine sugar and water in a saucepan. Heat until sugar dissolves. Let cool completely.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Blend Ingredients</h3>
+              <p>In a blender, blend mango cubes, syrup, lime juice, and a pinch of salt until smooth.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Chill</h3>
+              <p>Pour mixture into a bowl, cover, and refrigerate for 1–2 hours to chill.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Freeze</h3>
+              <p>Pour mixture into an ice cream maker or freeze in a container, stirring every 30 minutes until smooth and frozen (about 4–5 hours).</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="recipe-notes">
+      <h2><i class="fas fa-lightbulb"></i> Chef's Tips</h2>
+      <ul>
+        <li>Use very ripe mangoes for the best flavor and sweetness.</li>
+        <li>You can skip the sugar if the mangoes are naturally very sweet.</li>
+        <li>Add mint or ginger for a unique twist.</li>
+        <li>Serve in chilled bowls or scooped into cones for fun.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+<script>
+function printRecipe() {
+  window.print();
+}
+function saveRecipe() {
+  alert('Recipe saved to your favorites!');
+}
+function shareRecipe() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Mango Sorbet Recipe',
+      text: 'Try this refreshing Mango Sorbet!',
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert('Recipe link copied to clipboard!');
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Delicious Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="search-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Background Wrapper -->
+<div class="background-wrapper"></div>
+
+<header>
+    <div class="logo">🍽️ Delicious Recipes</div>
+    <div class="header-search-container">
+        <input type="text" id="header-search-input" placeholder="Search for a recipe...">
+        <div id="results-container"></div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">Recipes</a>
+                <ul class="dropdown-menu">
+                    <li><a href="breakfast/breakfast.html">Breakfast</a></li>
+                    <li><a href="lunch/lunch.html">Lunch</a></li>
+                    <li><a href="dinner.html">Dinner</a></li>
+                    <li><a href="desserts.html">Desserts</a></li>
+                </ul>
+            </li>
+            <li><a href="submit-recipe.html">Submit Recipe</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="login-btn">Login</a></li>
+            <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- About Content Section -->
+<section class="about-content">
+    <div class="container">
+        <h1>About Delicious Recipes</h1>
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Delicious Recipes is a platform for food lovers to share and discover amazing recipes from around the world. We believe that cooking brings people together and creates lasting memories.</p>
+                
+                <h2>Our Mission</h2>
+                <p>To make cooking accessible, enjoyable, and inspiring for everyone. Whether you're a beginner or an experienced chef, we have recipes that will help you create delicious meals for your family and friends.</p>
+                
+                <h2>What We Offer</h2>
+                <ul>
+                    <li>Carefully curated recipes from various cuisines</li>
+                    <li>Step-by-step cooking instructions</li>
+                    <li>Video tutorials for complex dishes</li>
+                    <li>Community-driven recipe sharing</li>
+                    <li>Nutritional information and dietary options</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Cooking together" />
+            </div>
+        </div>
+        
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-chef"></i>
+                    </div>
+                    <h3>Chef Maria</h3>
+                    <p>Head Chef & Recipe Developer</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>John Smith</h3>
+                    <p>Food Photographer</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Sarah Johnson</h3>
+                    <p>Community Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script src="search.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

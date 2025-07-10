@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipes - Lunch</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../search-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="lunch-page"></body>
+
+<!-- Background Wrapper to hold the background image -->
+<div class="background-wrapper"></div>
+
+<header>
+    <div class="logo"> 🍽️ Delicious Recipes</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../recipes.html" class="active">Recipes</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+                    <li><a href="lunch.html" class="active">Lunch</a></li>
+                    <li><a href="../dinner/dinner.html">Dinner</a></li>
+                    <li><a href="../desserts/desserts.html">Desserts</a></li>
+                </ul>
+            </li>
+            <li class="search-form">
+                <form action="/search" method="GET">
+                    <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </li>
+            <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../login.html" class="login-btn">Login</a></li>
+            <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section for Lunch Recipes -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Explore Delicious Lunch Recipes</h1>
+        <p>Discover a variety of lunch recipes to satisfy your midday cravings.</p>
+    </div>
+</section>
+
+<!-- Featured Recipe Categories -->
+<section class="categories">
+    <h1>Explore Lunch Recipes</h1>
+    <div class="category-grid">
+        <div class="category">
+            <img src="../images/mediterranean-lunch.jpg" alt="Mediterranean Lunch">
+            <h3>Mediterranean Lunch</h3>
+            <a href="Mediterrian lunch.html">Browse Recipes</a>
+        </div>
+        <div class="category">
+            <img src="../images/salad-bowl.jpg" alt="Salad Bowl">
+            <h3>Salad Bowl</h3>
+            <a href="salad-bowl.html">Browse Recipes</a>
+        </div>
+        <div class="category">
+            <img src="../images/sandwiches.jpg" alt="Sandwiches">
+            <h3>Sandwiches</h3>
+            <a href="sandwiches.html">Browse Recipes</a>
+        </div>
+        <div class="category">
+            <img src="../images/soup.jpg" alt="Soup">
+            <h3>Soup</h3>
+            <a href="soup.html">Browse Recipes</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+</html>

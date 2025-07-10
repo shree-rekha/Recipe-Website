@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buddha Bowl - Delicious Recipes</title>
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Background Wrapper -->
+<div class="background-wrapper"></div>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <div class="header-search-container">
+    <input type="text" id="header-search-input" placeholder="Search for a recipe...">
+    <div id="results-container"></div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html" class="active">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Recipe Detail Section -->
+<section class="recipe-detail">
+  <div class="container">
+    <div class="recipe-header">
+      <div class="recipe-image">
+        <img src="../images/buddha-bowl.jpg" alt="Buddha Bowl">
+      </div>
+      <div class="recipe-info">
+        <h1>Buddha Bowl</h1>
+        <p class="recipe-description">A colorful and balanced bowl loaded with grains, greens, roasted veggies, and protein, topped with a creamy tahini lemon dressing. Perfect for a healthy Mediterranean-style lunch.</p>
+
+        <div class="recipe-stats">
+          <div class="stat"><i class="fas fa-clock"></i><span>Prep: 15 mins</span></div>
+          <div class="stat"><i class="fas fa-fire"></i><span>Cook: 20 mins</span></div>
+          <div class="stat"><i class="fas fa-users"></i><span>Serves: 2</span></div>
+          <div class="stat"><i class="fas fa-signal"></i><span>Difficulty: Easy</span></div>
+        </div>
+
+        <div class="recipe-actions">
+          <button class="btn-primary" onclick="printRecipe()"><i class="fas fa-print"></i> Print Recipe</button>
+          <button class="btn-secondary" onclick="saveRecipe()"><i class="fas fa-heart"></i> Save Recipe</button>
+          <button class="btn-secondary" onclick="shareRecipe()"><i class="fas fa-share"></i> Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-content">
+      <div class="ingredients-section">
+        <h2><i class="fas fa-list"></i> Ingredients</h2>
+        <ul class="ingredients-list">
+          <li><input type="checkbox"> 1 cup cooked brown rice or quinoa</li>
+          <li><input type="checkbox"> 1 cup spinach or mixed greens</li>
+          <li><input type="checkbox"> 1/2 cup roasted sweet potatoes</li>
+          <li><input type="checkbox"> 1/2 cup roasted chickpeas or tofu cubes</li>
+          <li><input type="checkbox"> 1/4 cup shredded carrots</li>
+          <li><input type="checkbox"> 1/4 avocado, sliced</li>
+          <li><input type="checkbox"> 2 tbsp tahini</li>
+          <li><input type="checkbox"> 1 tbsp lemon juice</li>
+          <li><input type="checkbox"> 1 tsp maple syrup or honey</li>
+          <li><input type="checkbox"> Salt and pepper to taste</li>
+          <li><input type="checkbox"> Optional: sesame seeds, pumpkin seeds</li>
+        </ul>
+      </div>
+
+      <div class="instructions-section">
+        <h2><i class="fas fa-clipboard-list"></i> Instructions</h2>
+        <ol class="instructions-list">
+          <li>
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Prepare the Base</h3>
+              <p>Cook brown rice or quinoa as per package instructions and let cool slightly.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Roast the Veggies</h3>
+              <p>Chop and roast sweet potatoes and chickpeas (or tofu) with olive oil, salt, and pepper at 200°C (400°F) for 20 minutes.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Make Tahini Dressing</h3>
+              <p>Mix tahini, lemon juice, maple syrup, salt, and a little water until creamy and smooth.</p>
+            </div>
+          </li>
+          <li>
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Assemble the Bowl</h3>
+              <p>Layer rice/quinoa, greens, roasted veggies, carrots, and avocado. Drizzle with tahini dressing and sprinkle seeds.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="recipe-notes">
+      <h2><i class="fas fa-lightbulb"></i> Chef's Tips</h2>
+      <ul>
+        <li>Use leftovers for toppings like grilled veggies or beans.</li>
+        <li>For crunch, add roasted nuts or seeds.</li>
+        <li>Chill the dressing before drizzling for a thicker texture.</li>
+        <li>Double the tahini dressing and store for later use.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+<script>
+function printRecipe() {
+  window.print();
+}
+function saveRecipe() {
+  alert('Recipe saved to your favorites!');
+}
+function shareRecipe() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Buddha Bowl Recipe',
+      text: 'Try this nourishing Buddha Bowl lunch!',
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert('Recipe link copied to clipboard!');
+  }
+}
+</script>
+
+</body>
+</html>

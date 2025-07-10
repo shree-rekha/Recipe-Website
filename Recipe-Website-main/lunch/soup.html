@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soup Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Soup Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- Tomato Basil Soup -->
+    <div class="recipe" id="tomato-soup">
+      <img src="../images/tomato-soup.jpg" alt="Tomato Basil Soup">
+      <h3>Tomato Basil Soup</h3>
+      <p>Rich and creamy tomato soup with fresh basil.</p>
+      <ol class="recipe-steps">
+        <li>Cook onions and garlic in olive oil.</li>
+        <li>Add chopped tomatoes and simmer for 20 minutes.</li>
+        <li>Blend smooth and stir in cream and basil.</li>
+        <li>Serve hot with bread or croutons.</li>
+      </ol>
+      <a href="tomato-soup.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=szjZ3vqwyXE" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Chicken Noodle Soup -->
+    <div class="recipe" id="chicken-noodle">
+      <img src="../images/chicken-noodle.jpg" alt="Chicken Noodle Soup">
+      <h3>Chicken Noodle Soup</h3>
+      <p>Comforting soup with chicken, noodles, and veggies.</p>
+      <ol class="recipe-steps">
+        <li>Sauté onions, carrots, and celery in butter.</li>
+        <li>Add chicken broth and shredded chicken.</li>
+        <li>Stir in egg noodles and cook until tender.</li>
+        <li>Season with herbs and serve warm.</li>
+      </ol>
+      <a href="chicken-noodle.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=O2XXgo_u7b0" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Sweet Corn Soup -->
+    <div class="recipe" id="sweet-corn">
+      <img src="../images/sweet-corn.jpg" alt="Sweet Corn Soup">
+      <h3>Sweet Corn Soup</h3>
+      <p>Delicate Indo-Chinese style soup with sweet corn and veggies.</p>
+      <ol class="recipe-steps">
+        <li>Boil corn, carrots, and beans in water or broth.</li>
+        <li>Add corn paste and cook until thickened.</li>
+        <li>Season with salt, pepper, and a splash of soy sauce.</li>
+        <li>Garnish with spring onions.</li>
+      </ol>
+      <a href="sweet-corn.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=YMLdWEuVg1s" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

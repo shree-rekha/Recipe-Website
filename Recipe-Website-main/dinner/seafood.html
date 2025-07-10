@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seafood Dishes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Seafood Dishes</h2>
+  <div class="recipe-grid">
+
+    <!-- Grilled Salmon -->
+    <div class="recipe" id="grilled-salmon">
+      <img src="../images/grilled-salmon.jpg" alt="Grilled Salmon">
+      <h3>Grilled Salmon</h3>
+      <p>Perfectly grilled salmon fillet with lemon and herbs.</p>
+      <ol class="recipe-steps">
+        <li>Season salmon with salt, pepper, and lemon juice.</li>
+        <li>Grill skin-side down for 6–8 minutes.</li>
+        <li>Flip and grill 2–3 more minutes.</li>
+        <li>Serve with steamed vegetables or rice.</li>
+      </ol>
+      <a href="grilled-salmon.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=j7BkpjD-HZ0" target="_blank">Video</a>
+    </div>
+
+    <!-- Garlic Butter Shrimp -->
+    <div class="recipe" id="garlic-butter-shrimp">
+      <img src="../images/garlic-butter-shrimp.jpg" alt="Garlic Butter Shrimp">
+      <h3>Garlic Butter Shrimp</h3>
+      <p>Juicy shrimp sautéed in garlic butter and herbs.</p>
+      <ol class="recipe-steps">
+        <li>Heat butter in a pan and sauté garlic.</li>
+        <li>Add shrimp, cook 2–3 minutes per side.</li>
+        <li>Squeeze lemon juice and sprinkle parsley.</li>
+        <li>Serve with pasta or bread.</li>
+      </ol>
+      <a href="garlic-butter-shrimp.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=t-xM807ZV6w" target="_blank">Video</a>
+    </div>
+
+    <!-- Fish Tacos -->
+    <div class="recipe" id="fish-tacos">
+      <img src="../images/fish-tacos.jpg" alt="Fish Tacos">
+      <h3>Fish Tacos</h3>
+      <p>Flaky white fish with slaw and creamy sauce in warm tortillas.</p>
+      <ol class="recipe-steps">
+        <li>Season and pan-fry white fish fillets.</li>
+        <li>Prepare cabbage slaw and garlic-lime sauce.</li>
+        <li>Assemble in tortillas with toppings.</li>
+        <li>Serve with lime wedges.</li>
+      </ol>
+      <a href="fish-tacos.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=CPFxcByLeYE" target="_blank">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

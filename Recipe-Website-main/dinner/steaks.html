@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steaks & Grills Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Steaks & Grills Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- Grilled Ribeye Steak -->
+    <div class="recipe" id="ribeye-steak">
+      <img src="../images/ribeye-steak.jpg" alt="Grilled Ribeye Steak">
+      <h3>Grilled Ribeye Steak</h3>
+      <p>Juicy, perfectly grilled ribeye with garlic butter.</p>
+      <ol class="recipe-steps">
+        <li>Season steak with salt, pepper, and garlic powder.</li>
+        <li>Grill over high heat for 4–5 minutes per side.</li>
+        <li>Let rest for 5 minutes and top with garlic butter.</li>
+        <li>Serve with grilled veggies or mashed potatoes.</li>
+      </ol>
+      <a href="ribeye-steak.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=Zre_f47P_OM" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- BBQ Chicken -->
+    <div class="recipe" id="bbq-chicken">
+      <img src="../images/bbq-chicken.jpg" alt="BBQ Chicken">
+      <h3>BBQ Chicken</h3>
+      <p>Grilled chicken glazed with smoky barbecue sauce.</p>
+      <ol class="recipe-steps">
+        <li>Marinate chicken in BBQ sauce for 1 hour.</li>
+        <li>Grill on medium heat until cooked through.</li>
+        <li>Brush with extra sauce during final minutes.</li>
+        <li>Serve with coleslaw and fries.</li>
+      </ol>
+      <a href="bbq-chicken.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=cw17vN4E4O8" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Grilled Veg Skewers -->
+    <div class="recipe" id="veg-skewers">
+      <img src="../images/veg-skewers.jpg" alt="Grilled Veggie Skewers">
+      <h3>Grilled Veggie Skewers</h3>
+      <p>Colorful skewers with marinated vegetables grilled to perfection.</p>
+      <ol class="recipe-steps">
+        <li>Cut zucchini, bell peppers, mushrooms, and onions.</li>
+        <li>Marinate with olive oil, lemon juice, garlic, and herbs.</li>
+        <li>Thread onto skewers and grill until charred and tender.</li>
+        <li>Serve with yogurt dip or hummus.</li>
+      </ol>
+      <a href="veg-skewers.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=RsThTMk-VGM" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

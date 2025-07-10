@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mediterranean Lunch Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Mediterranean Lunch Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- Greek Salad -->
+    <div class="recipe" id="greek-salad">
+      <img src="../images/greek-salad.jpg" alt="Greek Salad">
+      <h3>Greek Salad</h3>
+      <p>A refreshing salad with tomatoes, cucumbers, olives, and feta cheese.</p>
+      <ol class="recipe-steps">
+        <li>Chop tomatoes, cucumbers, and onions.</li>
+        <li>Add olives and crumbled feta cheese.</li>
+        <li>Drizzle with olive oil and vinegar, season with oregano.</li>
+        <li>Toss and serve chilled.</li>
+      </ol>
+      <a href="greek-salad.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=kwq4vl610iY&t=3m04s" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Hummus and Pita -->
+    <div class="recipe" id="hummus-pita">
+      <img src="../images/hummus-pita.jpg" alt="Hummus and Pita">
+      <h3>Hummus and Pita</h3>
+      <p>Classic creamy hummus served with warm pita bread.</p>
+      <ol class="recipe-steps">
+        <li>Blend chickpeas, tahini, lemon juice, garlic, and olive oil.</li>
+        <li>Adjust consistency and seasoning as needed.</li>
+        <li>Warm pita bread on a skillet or in the oven.</li>
+        <li>Serve hummus with pita slices and olive oil drizzle.</li>
+      </ol>
+      <a href="hummus.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=smA3dEHLGpk" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Grilled Mediterranean Vegetables -->
+    <div class="recipe" id="grilled-veggies">
+      <img src="../images/grilled-vegetables.jpg" alt="Grilled Mediterranean Vegetables">
+      <h3>Grilled Mediterranean Vegetables</h3>
+      <p>Seasoned vegetables grilled with olive oil and herbs.</p>
+      <ol class="recipe-steps">
+        <li>Slice zucchini, eggplant, peppers, and onions.</li>
+        <li>Toss in olive oil, garlic, and mixed herbs.</li>
+        <li>Grill until charred and tender.</li>
+        <li>Serve with balsamic drizzle or feta on top.</li>
+      </ol>
+      <a href="grilled-veggies.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=ETq3bcQY9N0" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

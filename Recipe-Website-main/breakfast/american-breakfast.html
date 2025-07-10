@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Breakfast Recipes</title>
+
+    <link rel="stylesheet" href="../styles1.css">
+    <link rel="stylesheet" href="../search-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .recipe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        .recipe img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🍽️ Delicious Recipes</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../recipes.html" class="active">Recipes</a>
+                <ul class="dropdown-menu">
+                    <li><a href="breakfast.html">Breakfast</a></li>
+                    <li><a href="../lunch/lunch.html">Lunch</a></li>
+                    <li><a href="../dinner/dinner.html">Dinner</a></li>
+                    <li><a href="../desserts/desserts.html">Desserts</a></li>
+                </ul>
+            </li>
+            <li class="search-form">
+                <form action="../search" method="GET">
+                    <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </li>
+            <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../login.html" class="login-btn">Login</a></li>
+            <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="recipes">
+    <h2>American Breakfast Recipes</h2>
+    <div class="recipe-grid">
+
+        <!-- Pancakes -->
+        <div class="recipe" id="pancakes">
+            <img src="../images/pancakes.jpg" alt="Pancakes">
+            <h3>Fluffy Pancakes</h3>
+            <p>Classic American pancakes, golden and fluffy.</p>
+            <ol class="recipe-steps">
+                <li>Mix flour, sugar, baking powder, eggs, milk, and butter.</li>
+                <li>Heat a greased pan over medium heat.</li>
+                <li>Pour batter and cook until bubbles form; flip and cook until golden.</li>
+                <li>Serve with maple syrup and butter.</li>
+            </ol>
+            <a href="pancakes.html">More Info</a><br>
+            <a href="https://www.youtube.com/watch?v=vkcHmpKxFwg" target="_blank" rel="noopener noreferrer">Video</a>
+        </div>
+
+        <!-- Scrambled Eggs with Bacon -->
+        <div class="recipe" id="scrambled-eggs-bacon">
+            <img src="../images/scrambled-eggs-bacon.jpg" alt="Scrambled Eggs with Bacon">
+            <h3>Scrambled Eggs & Bacon</h3>
+            <p>Soft scrambled eggs with crispy American bacon.</p>
+            <ol class="recipe-steps">
+                <li>Whisk eggs with salt, pepper, and milk.</li>
+                <li>Cook bacon strips in a skillet until crispy; set aside.</li>
+                <li>Pour egg mixture into the pan and stir gently until soft and fluffy.</li>
+                <li>Serve eggs with bacon on the side.</li>
+            </ol>
+            <a href="scrambled-eggs.html">More Info</a><br>
+            <a href="https://www.youtube.com/watch?v=qNslwSYi9po" target="_blank" rel="noopener noreferrer">Video</a>
+        </div>
+
+        <!-- Hash Browns -->
+        <div class="recipe" id="hash-browns">
+            <img src="../images/hash-browns.jpg" alt="Hash Browns">
+            <h3>Hash Browns</h3>
+            <p>Crispy shredded potatoes, fried to perfection.</p>
+            <ol class="recipe-steps">
+                <li>Peel and grate potatoes. Rinse and squeeze out excess water.</li>
+                <li>Mix with salt and pepper.</li>
+                <li>Press into a hot oiled pan and cook until golden and crispy on both sides.</li>
+                <li>Serve hot with ketchup or eggs.</li>
+            </ol>
+            <a href="hash-browns.html">More Info</a><br>
+            <a href="https://www.youtube.com/watch?v=7wnR5tIPyHs" target="_blank" rel="noopener noreferrer">Video</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

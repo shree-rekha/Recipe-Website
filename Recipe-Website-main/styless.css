@@ -1,0 +1,192 @@
+/* General Page Styles */
+header {
+    background-color: #ff6f61;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #ffb4a2;
+    border-radius: 5px;
+}
+
+header nav ul li a.active {
+    background-color: #ffb4a2;
+    border-radius: 5px;
+}
+
+header nav ul li:hover > .dropdown-menu {
+    display: block;
+}
+
+header nav ul li .dropdown-menu li {
+    margin: 5px 0;
+}
+
+header nav ul li .dropdown-menu li a {
+    color: white;
+    font-size: 1em;
+    padding: 8px 10px;
+    display: block;
+}
+
+header nav ul li .dropdown-menu li a:hover {
+    background-color: #ffb4a2;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ff6f61;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://thumbs.dreamstime.com/b/open-recipe-book-lies-rustic-wooden-countertop-surrounded-fresh-herbs-various-spices-vegetables-open-recipe-book-338822956.jpg");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 80px; /* Adjust to give space for the fixed header */
+}
+
+/* Centered Form Container */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Heading */
+.auth-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Fields */
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Submit Button */
+.auth-container button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    background-color: #ffb4a2;
+}
+
+/* Links */
+.auth-container p {
+    margin-top: 15px;
+}
+
+.auth-container a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}

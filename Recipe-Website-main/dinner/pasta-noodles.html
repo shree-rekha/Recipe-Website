@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pasta & Noodles Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Pasta & Noodles Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- Spaghetti Aglio e Olio -->
+    <div class="recipe" id="aglio-e-olio">
+      <img src="../images/aglio-olio.jpg" alt="Spaghetti Aglio e Olio">
+      <h3>Spaghetti Aglio e Olio</h3>
+      <p>Simple Italian pasta with garlic, olive oil, and chili flakes.</p>
+      <ol class="recipe-steps">
+        <li>Boil spaghetti until al dente.</li>
+        <li>Sauté garlic and chili flakes in olive oil.</li>
+        <li>Toss pasta with the oil and parsley.</li>
+        <li>Serve hot with parmesan.</li>
+      </ol>
+      <a href="aglio-e-olio.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=Hb5L3Qfd5xY" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Creamy Alfredo Pasta -->
+    <div class="recipe" id="alfredo-pasta">
+      <img src="../images/alfredo.jpg" alt="Creamy Alfredo Pasta">
+      <h3>Creamy Alfredo Pasta</h3>
+      <p>Rich pasta tossed in a creamy garlic parmesan sauce.</p>
+      <ol class="recipe-steps">
+        <li>Boil fettuccine until cooked.</li>
+        <li>Melt butter, add garlic and cream.</li>
+        <li>Add parmesan and mix until smooth.</li>
+        <li>Toss pasta and serve warm.</li>
+      </ol>
+      <a href="alfredo-pasta.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=5vy9HeL8mOc" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Veg Hakka Noodles -->
+    <div class="recipe" id="hakka-noodles">
+      <img src="../images/hakka-noodles.jpg" alt="Veg Hakka Noodles">
+      <h3>Veg Hakka Noodles</h3>
+      <p>Popular Indo-Chinese stir-fried noodles with vegetables.</p>
+      <ol class="recipe-steps">
+        <li>Boil noodles and rinse with cold water.</li>
+        <li>Sauté garlic, onion, and vegetables on high heat.</li>
+        <li>Add noodles and toss with soy sauce and vinegar.</li>
+        <li>Garnish with spring onions and serve.</li>
+      </ol>
+      <a href="hakka-noodles.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=7kwmmK4FhCI" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>

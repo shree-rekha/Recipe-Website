@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salad Bowl Recipes</title>
+
+  <link rel="stylesheet" href="../styles1.css">
+  <link rel="stylesheet" href="../search-styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+    }
+    .recipe img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍽️ Delicious Recipes</div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../recipes.html" class="active">Recipes</a>
+        <ul class="dropdown-menu">
+          <li><a href="../breakfast/breakfast.html">Breakfast</a></li>
+          <li><a href="../lunch/lunch.html">Lunch</a></li>
+          <li><a href="../dinner/dinner.html">Dinner</a></li>
+          <li><a href="../desserts/desserts.html">Desserts</a></li>
+        </ul>
+      </li>
+      <li class="search-form">
+        <form action="../search" method="GET">
+          <input type="text" name="q" id="search-input" placeholder="Search recipes...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </li>
+      <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../login.html" class="login-btn">Login</a></li>
+      <li><a href="../signup.html" class="signup-btn">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="recipes">
+  <h2>Salad Bowl Recipes</h2>
+  <div class="recipe-grid">
+
+    <!-- Quinoa Salad Bowl -->
+    <div class="recipe" id="quinoa-bowl">
+      <img src="../images/quinoa-salad.jpg" alt="Quinoa Salad Bowl">
+      <h3>Quinoa Salad Bowl</h3>
+      <p>Nutritious bowl with quinoa, black beans, corn, and avocado.</p>
+      <ol class="recipe-steps">
+        <li>Cook quinoa and let it cool.</li>
+        <li>Mix with black beans, corn, bell peppers, and avocado.</li>
+        <li>Drizzle with lime juice and olive oil.</li>
+        <li>Top with fresh coriander and feta (optional).</li>
+      </ol>
+      <a href="quinoa-bowl.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=uK4LibynqSk" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Buddha Bowl -->
+    <div class="recipe" id="buddha-bowl">
+      <img src="../images/buddha-bowl.jpg" alt="Buddha Bowl">
+      <h3>Buddha Bowl</h3>
+      <p>A balanced bowl with grains, greens, chickpeas, and tahini dressing.</p>
+      <ol class="recipe-steps">
+        <li>Layer brown rice or quinoa, spinach, and roasted veggies.</li>
+        <li>Add chickpeas or tofu.</li>
+        <li>Drizzle with tahini lemon dressing.</li>
+        <li>Top with seeds or nuts for crunch.</li>
+      </ol>
+      <a href="buddha-bowl.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=cSVwY3NPOSw" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+    <!-- Mexican Salad Bowl -->
+    <div class="recipe" id="mexican-salad-bowl">
+      <img src="../images/mexican-bowl.jpg" alt="Mexican Salad Bowl">
+      <h3>Mexican Salad Bowl</h3>
+      <p>Bold and colorful with rice, beans, salsa, and guacamole.</p>
+      <ol class="recipe-steps">
+        <li>Layer cooked rice, kidney beans, corn, and lettuce.</li>
+        <li>Add tomato salsa and guacamole.</li>
+        <li>Sprinkle with shredded cheese and jalapeños.</li>
+        <li>Serve with a lime wedge.</li>
+      </ol>
+      <a href="mexican-bowl.html">More Info</a><br>
+      <a href="https://www.youtube.com/watch?v=ESJnmZJa9T8" target="_blank" rel="noopener noreferrer">Video</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Delicious Recipes. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script src="../search.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>
